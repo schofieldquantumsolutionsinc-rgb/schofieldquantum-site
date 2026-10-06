@@ -15,7 +15,21 @@
       rel="stylesheet"
     />
     <title>Schofield Quantum — Agent Crews for Hire | Queminal Web</title>
-    <script type="module" crossorigin src="./assets/index-CQjWRfew.js"></script>
+    <script type="module">
+/* Qbundle loader: app JS ships as sequential chunks (transport limit), reassembled here. */
+const parts = ["./assets/qbundle.1.js","./assets/qbundle.2.js","./assets/qbundle.3.js","./assets/qbundle.4.js"];
+try {
+  const code = (await Promise.all(parts.map(async p => {
+    const r = await fetch(p);
+    if (!r.ok) throw new Error("chunk missing: " + p);
+    return r.text();
+  }))).join("");
+  await import(URL.createObjectURL(new Blob([code], { type: "text/javascript" })));
+} catch (e) {
+  console.error("Schofield Quantum failed to start:", e);
+  document.body.insertAdjacentHTML("beforeend", '<p style="color:#fff;padding:2rem;font-family:monospace">App failed to load. Please refresh.</p>');
+}
+</script>
     <link rel="stylesheet" crossorigin href="./assets/index-GIPiblDC.css">
   </head>
   <body>
