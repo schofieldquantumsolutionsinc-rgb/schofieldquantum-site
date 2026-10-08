@@ -20,7 +20,6 @@ try {
   await import(URL.createObjectURL(new Blob([code], { type: "text/javascript" })));
 } catch (e) {
   console.error("Schofield Quantum failed to start:", e);
-  document.body.insertAdjacentHTML("beforeend", '<p style="color:#fff;padding:2rem;font-family:monospace">App failed to load. Please refresh.</p>');
 }
     </script>
     <link rel="stylesheet" crossorigin href="./assets/index-76F6pGYI.css">
