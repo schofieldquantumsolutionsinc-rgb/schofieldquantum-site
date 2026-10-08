@@ -10,8 +10,7 @@
     <meta name="robots" content="index,follow" />
     <title>Schofield Quantum — Agent Crews for Hire | Queminal Web</title>
     <script type="module">
-/* Qbundle loader: app JS ships as sequential chunks (transport limit), reassembled here. */
-const parts = ["./assets/qbundle.1.js","./assets/qbundle.2.js","./assets/qbundle.3.js","./assets/qbundle.4.js"];
+const parts = ["./assets/qchunk.00","./assets/qchunk.01","./assets/qchunk.02","./assets/qchunk.03","./assets/qchunk.04","./assets/qchunk.05"];
 try {
   const code = (await Promise.all(parts.map(async p => {
     const r = await fetch(p);
@@ -21,13 +20,9 @@ try {
   await import(URL.createObjectURL(new Blob([code], { type: "text/javascript" })));
 } catch (e) {
   console.error("Schofield Quantum failed to start:", e);
-  document.body.insertAdjacentHTML("beforeend", '<p style="color:#fff;padding:2rem;font-family:monospace">App failed to load. Please refresh.</p>');
 }
     </script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BIUrqpMk.css">
-    <link rel="stylesheet" crossorigin href="./assets/font-inter-var.css">
-    <link rel="stylesheet" crossorigin href="./assets/font-jetbrainsmono-var.css">
-    <link rel="stylesheet" crossorigin href="./assets/font-jetbrainsmono-var-italic.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-76F6pGYI.css">
   </head>
   <body>
     <div id="root"></div>
